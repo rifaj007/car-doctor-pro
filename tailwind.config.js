@@ -13,6 +13,30 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
-  },
-  plugins: [],
+  }, 
+  plugins: [
+   require('daisyui'),
+ ],
+ daisyui: {
+   themes: [
+     {
+       carDoctorTheme: {
+         ...require("daisyui/src/theming/themes")["light"],
+         "primary": "#FF3811",
+         "secondary": "teal",
+         "dark": "#444444",
+
+         ".btn-primary" : {
+            "color" : "#fff"
+         },
+
+         ".btn-outline.btn-primary:hover" : {
+            "color" : "#fff"
+         },
+       },
+     },
+     "dark",
+     "light",
+   ],
+ },
 };
