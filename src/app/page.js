@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic"
+
 import Homepage from "@/components/Homepage/Homepage";
 import Image from "next/image";
 
