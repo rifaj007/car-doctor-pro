@@ -7,9 +7,11 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import SocialSignin from '@/components/shared/SocialSignin';
 
 const page = () => {
-   const router = useRouter()
-   const searchParams = useSearchParams()
-   const path = searchParams.get('redirect')
+   // eslint-disable-next-line react-hooks/rules-of-hooks
+   const Router = useRouter()
+   // eslint-disable-next-line react-hooks/rules-of-hooks
+   const SearchParams = useSearchParams()
+   const path = SearchParams.get('redirect')
 
    const handleLogin = async(e) =>{
       e.preventDefault()
@@ -21,7 +23,7 @@ const page = () => {
       })
 
      if(resp.status === 200) {
-      router.push("/")
+      Router.push("/")
      }
    }
 

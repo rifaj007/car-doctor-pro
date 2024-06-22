@@ -4,7 +4,9 @@ import React, {useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 
 const page = ({params}) => {
+   // eslint-disable-next-line react-hooks/rules-of-hooks
    const { data } = useSession();
+   // eslint-disable-next-line react-hooks/rules-of-hooks
    const [booking, setBooking] = useState([]);
    
    const handleBooking = async () => {
@@ -13,6 +15,7 @@ const data = await bookingDetail.json()
 setBooking(data.data)
    };
 
+   // eslint-disable-next-line react-hooks/rules-of-hooks
    useEffect(()=>{
       handleBooking()
    }, [params])

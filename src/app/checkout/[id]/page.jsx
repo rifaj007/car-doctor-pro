@@ -43,7 +43,7 @@ const {data} =useSession()
 
    useEffect(() => {
       loadService()
-   }, [params.id])
+   }, [loadService])
 
 
    return (
